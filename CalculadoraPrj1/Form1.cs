@@ -93,91 +93,70 @@ namespace CalculadoraPrj1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Obtiene el número del botón presionado
             Button boton = (Button)sender;
-
-            // Llama al método para agregar el número
             AgregarNumero(boton.Text);
         }
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            // Obtiene el número del botón presionado
-            Button boton = (Button)sender;
 
-            // Llama al método para agregar el número
+            Button boton = (Button)sender;
             AgregarNumero(boton.Text);
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            // Obtiene el número del botón presionado
-            Button boton = (Button)sender;
 
-            // Llama al método para agregar el número
+            Button boton = (Button)sender;
             AgregarNumero(boton.Text);
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            // Obtiene el número del botón presionado
-            Button boton = (Button)sender;
 
-            // Llama al método para agregar el número
+            Button boton = (Button)sender;
             AgregarNumero(boton.Text);
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {
-            // Obtiene el número del botón presionado
-            Button boton = (Button)sender;
 
-            // Llama al método para agregar el número
+            Button boton = (Button)sender;
             AgregarNumero(boton.Text);
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {
-            // Obtiene el número del botón presionado
-            Button boton = (Button)sender;
 
-            // Llama al método para agregar el número
+            Button boton = (Button)sender;
             AgregarNumero(boton.Text);
         }
 
         private void btn6_Click(object sender, EventArgs e)
         {
-            // Obtiene el número del botón presionado
-            Button boton = (Button)sender;
 
-            // Llama al método para agregar el número
+            Button boton = (Button)sender;
             AgregarNumero(boton.Text);
         }
 
         private void btn7_Click(object sender, EventArgs e)
         {
-            // Obtiene el número del botón presionado
-            Button boton = (Button)sender;
 
-            // Llama al método para agregar el número
+            Button boton = (Button)sender;
             AgregarNumero(boton.Text);
         }
 
         private void btn8_Click(object sender, EventArgs e)
         {
-            // Obtiene el número del botón presionado
-            Button boton = (Button)sender;
 
-            // Llama al método para agregar el número
+            Button boton = (Button)sender;
             AgregarNumero(boton.Text);
         }
 
         private void btn9_Click(object sender, EventArgs e)
         {
-            // Obtiene el número del botón presionado
-            Button boton = (Button)sender;
 
-            // Llama al método para agregar el número
+            Button boton = (Button)sender;
             AgregarNumero(boton.Text);
         }
 
