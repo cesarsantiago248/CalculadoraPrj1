@@ -52,6 +52,7 @@
             this.btnRaiz = new System.Windows.Forms.Button();
             this.btnFactorial = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnLog = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -341,7 +342,7 @@
             this.btnCuadrado.BackColor = System.Drawing.Color.DarkBlue;
             this.btnCuadrado.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCuadrado.ForeColor = System.Drawing.Color.White;
-            this.btnCuadrado.Location = new System.Drawing.Point(337, 174);
+            this.btnCuadrado.Location = new System.Drawing.Point(337, 139);
             this.btnCuadrado.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCuadrado.Name = "btnCuadrado";
             this.btnCuadrado.Size = new System.Drawing.Size(70, 65);
@@ -355,7 +356,7 @@
             this.btnRaiz.BackColor = System.Drawing.Color.DarkBlue;
             this.btnRaiz.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRaiz.ForeColor = System.Drawing.Color.White;
-            this.btnRaiz.Location = new System.Drawing.Point(337, 256);
+            this.btnRaiz.Location = new System.Drawing.Point(337, 210);
             this.btnRaiz.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnRaiz.Name = "btnRaiz";
             this.btnRaiz.Size = new System.Drawing.Size(70, 65);
@@ -369,7 +370,7 @@
             this.btnFactorial.BackColor = System.Drawing.Color.DarkBlue;
             this.btnFactorial.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFactorial.ForeColor = System.Drawing.Color.White;
-            this.btnFactorial.Location = new System.Drawing.Point(337, 337);
+            this.btnFactorial.Location = new System.Drawing.Point(337, 281);
             this.btnFactorial.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnFactorial.Name = "btnFactorial";
             this.btnFactorial.Size = new System.Drawing.Size(70, 65);
@@ -389,6 +390,20 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Sara Lee, Cesar Santiago";
             // 
+            // btnLog
+            // 
+            this.btnLog.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnLog.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLog.ForeColor = System.Drawing.Color.White;
+            this.btnLog.Location = new System.Drawing.Point(337, 352);
+            this.btnLog.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnLog.Name = "btnLog";
+            this.btnLog.Size = new System.Drawing.Size(70, 65);
+            this.btnLog.TabIndex = 24;
+            this.btnLog.Text = "log";
+            this.btnLog.UseVisualStyleBackColor = false;
+            this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -396,6 +411,7 @@
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.BackgroundImage = global::CalculadoraPrj1.Properties.Resources.circuitboard3;
             this.ClientSize = new System.Drawing.Size(420, 464);
+            this.Controls.Add(this.btnLog);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnFactorial);
             this.Controls.Add(this.btnRaiz);
@@ -456,6 +472,7 @@
         private System.Windows.Forms.Button btnRaiz;
         private System.Windows.Forms.Button btnFactorial;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnLog;
     }
 }
 

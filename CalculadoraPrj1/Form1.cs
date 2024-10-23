@@ -30,6 +30,7 @@ namespace CalculadoraPrj1
         {
             InitializeComponent();
             ConectarBaseDeDatos();
+            textBox1.Text = "0";
         }
 
         private void ConectarBaseDeDatos()
@@ -64,8 +65,17 @@ namespace CalculadoraPrj1
                 operacionSeleccionada = false;
             }
 
-            // Concatenamos el número en el TextBox
-            textBox1.Text += numero;
+            
+            // Concatenamos el número en el TextBox (si el mismo no es 0)
+            if (textBox1.Text == "0")
+            {
+                textBox1.Text = numero;
+            }
+            else
+            {
+                textBox1.Text += numero;
+            }
+
         }
 
         private bool EsNumeroValido(string texto)
@@ -219,7 +229,7 @@ namespace CalculadoraPrj1
         // 6. Creamos un boton de limpiar la calculadora y anular operaciones realizadas
         private void btnLimpiar_Click_1(object sender, EventArgs e)
         {
-            textBox1.Clear();
+            textBox1.Text = "0"; 
             primerNumero = 0;
             operacion = "";
         }
@@ -374,6 +384,29 @@ namespace CalculadoraPrj1
             }
         }
 
+        // Agregamos un boton para calcular logaritmo base 10
+        private void btnLog_Click(object sender, EventArgs e)
+        {
+            if (EsNumeroValido(textBox1.Text))
+            {
+                double numero = Convert.ToDouble(textBox1.Text);
+                if (numero > 0) // El logaritmo solo está definido para números positivos
+                {
+                    double resultado = Math.Log10(numero);
+                    textBox1.Text = resultado.ToString();
 
+                    // Guardar el resultado en la base de datos
+                    GuardarOperacionEnBaseDeDatos(numero, 0, "log", resultado);
+                }
+                else
+                {
+                    MessageBox.Show("El logaritmo solo está definido para números positivos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un número válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
