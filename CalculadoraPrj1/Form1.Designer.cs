@@ -48,6 +48,10 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnPosNeg = new System.Windows.Forms.Button();
+            this.btnCuadrado = new System.Windows.Forms.Button();
+            this.btnRaiz = new System.Windows.Forms.Button();
+            this.btnFactorial = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -332,13 +336,70 @@
             this.btnPosNeg.UseVisualStyleBackColor = false;
             this.btnPosNeg.Click += new System.EventHandler(this.btnPosNeg_Click);
             // 
+            // btnCuadrado
+            // 
+            this.btnCuadrado.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnCuadrado.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCuadrado.ForeColor = System.Drawing.Color.White;
+            this.btnCuadrado.Location = new System.Drawing.Point(337, 174);
+            this.btnCuadrado.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCuadrado.Name = "btnCuadrado";
+            this.btnCuadrado.Size = new System.Drawing.Size(70, 65);
+            this.btnCuadrado.TabIndex = 20;
+            this.btnCuadrado.Text = "^2";
+            this.btnCuadrado.UseVisualStyleBackColor = false;
+            this.btnCuadrado.Click += new System.EventHandler(this.btnCuadrado_Click_1);
+            // 
+            // btnRaiz
+            // 
+            this.btnRaiz.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnRaiz.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRaiz.ForeColor = System.Drawing.Color.White;
+            this.btnRaiz.Location = new System.Drawing.Point(337, 256);
+            this.btnRaiz.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnRaiz.Name = "btnRaiz";
+            this.btnRaiz.Size = new System.Drawing.Size(70, 65);
+            this.btnRaiz.TabIndex = 21;
+            this.btnRaiz.Text = "Raiz2";
+            this.btnRaiz.UseVisualStyleBackColor = false;
+            this.btnRaiz.Click += new System.EventHandler(this.btnRaiz_Click);
+            // 
+            // btnFactorial
+            // 
+            this.btnFactorial.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnFactorial.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFactorial.ForeColor = System.Drawing.Color.White;
+            this.btnFactorial.Location = new System.Drawing.Point(337, 337);
+            this.btnFactorial.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnFactorial.Name = "btnFactorial";
+            this.btnFactorial.Size = new System.Drawing.Size(70, 65);
+            this.btnFactorial.TabIndex = 22;
+            this.btnFactorial.Text = "!";
+            this.btnFactorial.UseVisualStyleBackColor = false;
+            this.btnFactorial.Click += new System.EventHandler(this.btnFactorial_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label1.Location = new System.Drawing.Point(142, 441);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 14);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Sara Lee, Cesar Santiago";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.BackgroundImage = global::CalculadoraPrj1.Properties.Resources.circuitboard3;
-            this.ClientSize = new System.Drawing.Size(355, 430);
+            this.ClientSize = new System.Drawing.Size(420, 464);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnFactorial);
+            this.Controls.Add(this.btnRaiz);
+            this.Controls.Add(this.btnCuadrado);
             this.Controls.Add(this.btnPosNeg);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnLimpiar);
@@ -391,6 +452,10 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnPosNeg;
+        private System.Windows.Forms.Button btnCuadrado;
+        private System.Windows.Forms.Button btnRaiz;
+        private System.Windows.Forms.Button btnFactorial;
+        private System.Windows.Forms.Label label1;
     }
 }
 

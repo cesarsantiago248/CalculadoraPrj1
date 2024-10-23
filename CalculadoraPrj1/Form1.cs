@@ -273,6 +273,78 @@ namespace CalculadoraPrj1
             SeleccionarOperacion(boton.Text);
         }
 
+        // Adicionalmente creamos botones para calcular la raiz cuadrada y el cuadrado de un numero
+        private void btnRaiz_Click(object sender, EventArgs e)
+        {
+            if (EsNumeroValido(textBox1.Text))
+            {
+                double numero = Convert.ToDouble(textBox1.Text);
+                double resultado = Math.Sqrt(numero); // Calcular la raíz cuadrada
+
+                textBox1.Text = resultado.ToString();
+                GuardarOperacionEnBaseDeDatos(numero, 0, "√", resultado); // Guardar en la base de datos
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un número válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void btnCuadrado_Click_1(object sender, EventArgs e)
+        {
+            if (EsNumeroValido(textBox1.Text))
+            {
+                double numero = Convert.ToDouble(textBox1.Text);
+                double resultado = Math.Pow(numero, 2); // Elevar al cuadrado
+
+                textBox1.Text = resultado.ToString();
+                GuardarOperacionEnBaseDeDatos(numero, 0, "^2", resultado); // Guardar en la base de datos
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un número válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Adicionalmente creamos un boton para calcular el factorial de un numero
+        private void btnFactorial_Click(object sender, EventArgs e)
+        {
+            if (EsNumeroValido(textBox1.Text))
+            {
+                int numero = Convert.ToInt32(textBox1.Text);
+
+                if (numero >= 0)
+                {
+                    double resultado = Factorial(numero); // Calcular el factorial
+
+                    textBox1.Text = resultado.ToString();
+                    GuardarOperacionEnBaseDeDatos(numero, 0, "!", resultado); // Guardar en la base de datos
+                }
+                else
+                {
+                    MessageBox.Show("El factorial no está definido para números negativos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un número válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Este metodo calcula la factorial de un numero, es utilizado en el evento btnFactorial al hacer click en el boton.
+        private double Factorial(int numero)
+        {
+            double resultado = 1;
+
+            for (int i = 1; i <= numero; i++)
+            {
+                resultado *= i;
+            }
+
+            return resultado;
+        }
+
         private void GuardarOperacionEnBaseDeDatos(double primerNumero, double segundoNumero, string operacion, double resultado)
         {
             try
@@ -301,5 +373,7 @@ namespace CalculadoraPrj1
                 MessageBox.Show("Error al guardar la operación en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
     }
 }
